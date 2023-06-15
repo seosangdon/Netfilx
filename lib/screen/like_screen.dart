@@ -57,7 +57,7 @@ class _LikeScreenState extends State<LikeScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Image.asset(
-                  'images/bbongflix_logo.png',
+                  'images/bbongflix.png',
                   fit: BoxFit.contain,
                   height: 25,
                 ),
