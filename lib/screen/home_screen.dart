@@ -10,13 +10,21 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  FirebaseFirestore firestore = FirebaseFirestore.instance;
-  Stream<QuerySnapshot>? streamData;
+
+  FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+
+  late Stream<QuerySnapshot> streamData;
+
+
 
   @override
+
   void initState() {
+
     super.initState();
-    streamData = firestore.collection('movie').snapshots();
+
+    streamData = firebaseFirestore.collection('movie').snapshots();
+
   }
 
   Widget _fetchData(BuildContext context) {
